@@ -1,5 +1,5 @@
 {
-  "name": "hyls-test",
+  "name": "leaflet-test-map",
   "version": "1.0.0",
   "scripts": {
     "start": "gulp dev",

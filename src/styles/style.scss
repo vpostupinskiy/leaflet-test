@@ -1,4 +1,36 @@
 .map {
-  height: 100vh;
+  height: 80vh;
   width: 100%;
+}
+.readFile {
+  height: 20vh;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.inputfile + label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: red;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+  background-color: #c90000;
 }
