@@ -1,7 +1,7 @@
 (function (){
 
     // Initialize map
-    let map = L.map('map').setView([30, 60], 6);
+    let map = L.map('map').setView([59.95, 30.3], 12);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(map);
 
     const input = document.getElementById('file');
@@ -10,7 +10,6 @@
        for (let file of filelist){
             file.text().then(csv => {
                 drawMarkers(parseCSVText(csv));
-                console.log(parseCSVText(csv))
             })
         }
     });
@@ -30,7 +29,7 @@
         const markers = [];
         const latlngs = [];
         arrPoints.map(point => {
-            let latlng = [+point[6] , +point[7]];
+            let latlng = [+point[7] , +point[6]];
             let title = point[5];
             latlngs.push(latlng);
             markers.push(L.marker(latlng).bindPopup(title).openPopup());
